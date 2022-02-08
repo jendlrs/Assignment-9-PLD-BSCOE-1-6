@@ -10,3 +10,13 @@
 #	- Search how to read JSON file
 #	- You will create the JSON file manually
 #	- Your code should be in github before Feb12
+
+#Import needed modules
+from fpdf import FPDF
+
+#Set size of the paper and add blank page on the file
+DelaRosa_PDF = FPDF('P', 'mm', 'Letter'); 
+DelaRosa_PDF.add_page() 
+
+#Saving into PDF file
+DelaRosa_PDF.output('DELAROSA_MA.JENSENNICOLE.pdf') 
