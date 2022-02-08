@@ -19,17 +19,22 @@ dlrs_resume = ('DELAROSA_MA.JENSENNICOLE.pdf')
 
 #Header
 Name = 'DELA ROSA, MA. JENSEN NICOLE C.'
+position = 'Computer Engineering Student'
+#aligned_position = "{:<1000}".format(position) #This will align to the left side
 
 #Set size of the paper and add blank page on the file
 DelaRosa_PDF = FPDF('P', 'mm', 'Letter'); 
 DelaRosa_PDF.add_page() 
 
 #Font size and font style and format of the string for header
-DelaRosa_PDF.set_font('times', 'B', 15) 
-DelaRosa_PDF.cell(200, 10, Name) 
+DelaRosa_PDF.set_font('times', 'B', 20) 
+DelaRosa_PDF.cell(205, 15, Name) 
+DelaRosa_PDF.set_font ('times','',15)
+DelaRosa_PDF.cell (-137, 28, position, border=0,align="R", ln=2)
 
 #For images
 DelaRosa_PDF.image ('2x2_picture.png',150,10,50,0) #2x2 picture on the top right of the document
+DelaRosa_PDF.image ('divider.png',0,8,500,2) #Left, Up Length, Width
 
 #Saving into PDF file
 DelaRosa_PDF.output(dlrs_resume) 
