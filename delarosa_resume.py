@@ -28,5 +28,8 @@ DelaRosa_PDF.add_page()
 DelaRosa_PDF.set_font('times', 'B', 15) 
 DelaRosa_PDF.cell(200, 10, Name) 
 
+#For images
+DelaRosa_PDF.image ('2x2_picture.png',150,10,50,0) #2x2 picture on the top right of the document
+
 #Saving into PDF file
 DelaRosa_PDF.output(dlrs_resume) 
