@@ -13,11 +13,17 @@
 
 #Import needed modules
 import os
+import json
 from fpdf import FPDF
 
 #Global variables
 dlrs_resume = ('DELAROSA_MA.JENSENNICOLE.pdf')
 json_details = ('personal_details.json')
+
+
+#Read json file
+with open (json_details) as fh:
+    resume_data = json.loads(fh.read()) 
 
 #Header
 Name = 'DELA ROSA, MA. JENSEN NICOLE C.'
@@ -36,22 +42,25 @@ class PDF (FPDF):
         self.image ('divider.png',0,8,500,2)
         self.image ('divider.png',0,60,500,2)
 
-    def body (self, name):
-        #Read json file
-        with open (json_details) as fh:
-            resume_data = fh.read() 
-        self.set_font ('times', "", 12)
-        self.multi_cell (0, 7,resume_data, border=0, align ="R")
-        self.ln(2)
-
-    def output_ (self, name):
-        self.body(name)
+    def primaryDetails(self):
+        self.set_font("times", "B", 13)
+        self.cell (0,35, "", ln=True)
+        self.cell(115,8,"PERSONAL INFORMATION", ln =1, border= 1, align= 'C')
+        self.set_font ("times",'', 11)
+        self.cell(70,7, "Full Name: " + str(resume_data["primaryDetails"][0]["Full Name"]),ln =True)
+        self.cell(70,7, "Sex/Gender: " + str(resume_data["primaryDetails"][0]["Sex / Gender"]),ln =True)
+        self.cell(70,7, "Age: " + str(resume_data["primaryDetails"][0]["Age"]),ln =True)
+        self.cell(70,7, "Home Address: " + str(resume_data["primaryDetails"][0]["Home Address"]),ln =True)
+        self.cell(70,7, "Height: " + str(resume_data["primaryDetails"][0]["Height"]),ln =True)
+        self.cell(70,7, "Weight: " + str(resume_data["primaryDetails"][0]["Weight"]),ln =True)
     
 #Set size of the paper and add blank page on the file
 DelaRosa_PDF = PDF('P', 'mm', 'Letter')
 DelaRosa_PDF.set_auto_page_break (margin =0.5, auto =True)
 DelaRosa_PDF.add_page() 
-DelaRosa_PDF.body(json_details)
+
+#calling the functions
+DelaRosa_PDF.primaryDetails()
 
 #Saving into PDF file
 DelaRosa_PDF.output(dlrs_resume) 
