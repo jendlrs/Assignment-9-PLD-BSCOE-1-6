@@ -38,14 +38,15 @@ class PDF (FPDF):
         self.set_font ('times','', 15)
         self.cell (-137, 5, position)
         #for images
-        self.image ('2x2_picture.png',160,10,40,0)
-        self.image ('divider.png',0,8,500,2)
-        self.image ('divider.png',0,50,500,2)
-        self.image ('graph_techqualification.png', 120, 220, 60, 0)
+        self.image ('2x2_picture.png',160,7,40,0)
+        self.image ('divider.png',0,5,500,2)
+        self.image ('divider.png',0,48,500,2)
+        self.image ('divider.png',0,270,500,2)
+        self.image ('graph_techqualification.png', 120, 217, 60, 0)
 
     def primaryDetails(self):
         self.set_font("times", "B", 13)
-        self.cell (0,25, "", ln=True)
+        self.cell (0,22, "", ln=True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"PERSONAL INFORMATION", ln =1, border= 1, fill= True, align= 'C')
         self.set_font ("times",'', 11)
