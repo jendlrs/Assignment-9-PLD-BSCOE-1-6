@@ -1,65 +1,60 @@
 {
-    "primaryDetails": [
-        {
-            "Full Name": "Ma. Jensen Nicole C. Dela Rosa",
-            "Sex / Gender": "Female (F)",
-            "Age": "18 Years Old",
-            "Home Address": "#563 Presidential St. Batasan Hills Quezon City",
-            "Height": "158 cm",
-            "Weight": "43 kg"
-        }
-    ],
-    "contactInfo": [
-        {
-            "Email": "jendlrs333@gmail.com",
-            "Cellphone number": "09748321023"
-        }
-    ],
-    "academicBackground": [
-        {
-        "Elementary (2009-2015)": "Precious Learning Institute",
-        "Junior High School (2015-1019": "Batasan Hills National High School",
-        "Senior High School (2019-2021)": "Technological Institute of the Philippines",
-        "College (PRESENT)": "Polytechnic University of the Philippines"
-        }
-
-    ],
-    "achievements": [
-        "Leadership awardee (2019)",
-        "Junior High School: Consistent With Honors (S. Y. 2015-2019)",
-        "Senior High School:", 
-        "Grade 11 (S. Y. 2019-2020): With High Honors",
-        "Grade 12 (S.Y. 2020-2021): With High Honors",
-        "2nd placer Physics Quiz Bee (2020)"
-    ],
-
-    "characterReference": [
-        "Janeth A. Mendez",
-        "Teacher",
-        "University of Makati",
-        "09273828031",
-        "janeth16@gmail.com"
-    ],
-    
-    "coreCompetencies": [
-        "Verbal and nonverbal communication skills",
-        "Fast Learner",
-        "Creative thinking"
-    ],
-
-    "skills": [
-        "Clear communication and active learning skills",
-        "Ability to meet deadlines",
-        "Accuracy and skill in typing",
-        "Capability to effort independently",
-        "Knowledge in computer operation"
-    ],
-
-    "technicalQualification": [
-        {
-        "Microsoft Office": "Word, Excel, Powerpoint",
-        "Programming Skills": "Python",
-        "Graphic Editing": "Photoshop"
-        }
-    ]
+  "primaryDetails": [
+    {
+      "Full Name": "Ma. Jensen Nicole C. Dela Rosa",
+      "Sex / Gender": "Female (F)",
+      "Age": "18 Years Old",
+      "Home Address": "#563 Presidential St. Batasan Hills Quezon City",
+      "Height": "158 cm",
+      "Weight": "43 kg"
+    }
+  ],
+  "contactInfo": [
+    {
+      "Email": "jendlrs333@gmail.com",
+      "Cellphone number": "09748321023"
+    }
+  ],
+  "academicBackground": [
+    {
+      "Elementary (2009-2015)": "Precious Learning Institute",
+      "Junior High School (2015-1019": "Batasan Hills National High School",
+      "Senior High School (2019-2021)": "Technological Institute of the Philippines",
+      "College (PRESENT)": "Polytechnic University of the Philippines"
+    }
+  ],
+  "achievements": [
+    "Leadership awardee (2019)",
+    "Junior High School: Consistent With Honors (S. Y. 2015-2019)",
+    "Senior High School:",
+    "Grade 11 (S. Y. 2019-2020): With High Honors",
+    "Grade 12 (S.Y. 2020-2021): With High Honors",
+    "2nd placer Physics Quiz Bee (2020)"
+  ],
+  "characterReference": [
+    "Janeth A. Mendez",
+    "Teacher",
+    "University of Makati",
+    "09273828031",
+    "janeth16@gmail.com"
+  ],
+  "coreCompetencies": [
+    "Verbal and nonverbal communication skills",
+    "Fast Learner",
+    "Creative thinking"
+  ],
+  "skills": [
+    "Clear communication and active learning skills",
+    "Ability to meet deadlines",
+    "Accuracy and skill in typing",
+    "Capability to effort independently",
+    "Knowledge in computer operation"
+  ],
+  "technicalQualification": [
+    {
+      "Microsoft Office": "Word, Excel, Powerpoint",
+      "Programming Skills": "Python",
+      "Graphic Editing": "Photoshop"
+    }
+  ]
 }
