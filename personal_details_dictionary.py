@@ -47,14 +47,6 @@ resume_details ={
         "Janeth A. Mendez",
         }
     ],
-    
-    "coreCompetencies": [
-        {
-        "Competencies1": "Verbal and nonverbal communication skills",
-        "Competencies2": "Fast Learner",
-        "Competencies3": "Creative thinking"
-        }
-    ],
 
     "skills": [
         {
@@ -76,5 +68,5 @@ resume_details ={
 }
 
 file_json = json.dumps(resume_details, indent=2)
-with open("personal_details.json", "w") as resume: 
-    resume.write(file_json)
+with open("personal_details.json", "w") as resumedata: 
+    resumedata.write(file_json)
