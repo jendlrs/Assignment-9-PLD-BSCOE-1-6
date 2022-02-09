@@ -55,6 +55,15 @@ class PDF (FPDF):
         self.cell(70,7, "Height: " + str(resume_data["primaryDetails"][0]["Height"]),ln =True)
         self.cell(70,7, "Weight: " + str(resume_data["primaryDetails"][0]["Weight"]),ln =True)
     
+    def contactInfo (self):
+        self.set_font ("times", 'B', 13)
+        self.cell (0,4, "", ln =True)
+        self.set_fill_color(152,245,255)
+        self.cell(115,8,"CONTACT INFORMATION", ln =1, border= 1, fill= True, align= 'C')
+        self.set_font ("times",'', 11)
+        self.cell(70,7, "Email: " + str(resume_data["contactInfo"][0]["Email"]),ln =True)
+        self.cell(70,7, "Cellphone Number: " + str(resume_data["contactInfo"][0]["Cellphone number"]),ln =True)
+ 
 #Set size of the paper and add blank page on the file
 DelaRosa_PDF = PDF('P', 'mm', 'Letter')
 DelaRosa_PDF.set_auto_page_break (margin =0.5, auto =True)
@@ -62,7 +71,7 @@ DelaRosa_PDF.add_page()
 
 #calling the functions
 DelaRosa_PDF.primaryDetails()
-
+DelaRosa_PDF.contactInfo()
 #Saving into PDF file
 DelaRosa_PDF.output(dlrs_resume) 
 os.startfile(dlrs_resume)
