@@ -57,7 +57,7 @@ class PDF (FPDF):
     
     def contactInfo (self):
         self.set_font("times", "B",13)
-        self.cell (0,4,"",ln =True)
+        self.cell (0,1,"",ln =True)
         self.set_fill_color(152,245,255)
         self.cell (195, 8, "CONTACT INFORMATION", border=1, fill=True, align = 'C', ln=1)
         self.set_font ("times",'', 11)
@@ -66,7 +66,7 @@ class PDF (FPDF):
 
     def academicBackground (self):
         self.set_font ("times", 'B', 13)
-        self.cell (0,4, "", ln =True)
+        self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"ACADEMIC BACKGROUND", ln =1, border= 1, fill= True, align= 'C')
         self.set_font ("times",'', 11)
@@ -77,7 +77,7 @@ class PDF (FPDF):
 
     def achievements(self):
         self.set_font ("times", 'B', 13)
-        self.cell (0,4, "", ln =True)
+        self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"ACHIEVEMENTS", ln =1, border= 1, fill= True, align= 'C')
         self.set_font ("times",'', 11)
@@ -88,15 +88,40 @@ class PDF (FPDF):
         self.cell(100,7, str(resume_data["achievements"][0]["Achvmnts3_2"]),ln =False, align = 'R')
         self.cell(75,7, str(resume_data["achievements"][0]["Achvmnts3_3"]),ln =True, align = 'R')
 
-    def coreCompetencies (self):
+    def skills (self):
         self.set_font ("times", 'B', 13)
-        self.cell (0,4, "", ln =True)
+        self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
-        self.cell(115,8,"CORE COMPETENCIES", ln =1, border= 1, fill= True, align= 'C')
+        self.cell(195,8,"SKILLS", ln =1, border= 1, fill= True, align= 'C')
         self.set_font ("times",'', 11)
-        self.cell(70,7, str(resume_data["coreCompetencies"][0]["Competencies1"]),ln =True)
-        self.cell(70,7, str(resume_data["coreCompetencies"][0]["Competencies2"]),ln =True)
-        self.cell(70,7, str(resume_data["coreCompetencies"][0]["Competencies3"]),ln =True)
+        self.cell(90,7, str(resume_data["skills"][0]["Skill1"]),ln =False, align = 'R')
+        self.cell(80,7, str(resume_data["skills"][0]["Skill2"]),ln =True, align = 'R')
+        self.cell(70,7, str(resume_data["skills"][0]["Skill3"]),ln =False, align = 'R')
+        self.cell(105,7, str(resume_data["skills"][0]["Skill4"]),ln =True, align = 'R')
+        self.cell(0,7, str(resume_data["skills"][0]["Skill5"]),ln =True, align = 'C')
+
+    def technicalQualification (self):
+        self.set_font ("times", 'B', 13)
+        self.cell (0,1, "", ln =True)
+        self.set_fill_color(152,245,255)
+        self.cell(195,8,"TECHNICAL QUALIFICATION", ln =1, border= 1, fill= True, align= 'C')
+        self.set_font ("times",'', 11)
+        self.cell(90,7, "Microsoft Office: " + str(resume_data["technicalQualification"][0]["Microsoft Office"]),ln =True, align = 'R')
+        self.cell(90,7, "Programming Skill: " + str(resume_data["technicalQualification"][0]["Programming Skills"]),ln =True, align = 'R')
+        self.cell(90,7, "Graphic Editing: "+str(resume_data["technicalQualification"][0]["Graphic Editing"]),ln=True, align = 'R')
+
+
+    def characterReference(self):
+        self.set_font ("times", 'B', 13)
+        self.cell (0,1, "", ln =True)
+        self.set_fill_color(152,245,255)
+        self.cell(195,8,"CHARACTER REFERENCE", ln =1, border= 1, fill= True, align= 'C')
+        self.set_font ("times",'', 11)
+        self.cell(0,7, "Name: " + str(resume_data["characterReference"][0]["Name"]),ln =True, align = 'C')
+        self.cell(90,7, "Occupation: " + str(resume_data["characterReference"][0]["Occupation"]),ln =False, align = 'R')
+        self.cell(50,7, str(resume_data["characterReference"][0]["WAddress"]),ln =True, align = 'R')
+        self.cell(97,7, "Contact Number: " + str(resume_data["characterReference"][0]["ContactN"]),ln =False, align = 'R')
+        self.cell(50,7, "Email: " + str(resume_data["characterReference"][0]["Email"]),ln =False, align = 'R')
 
 #Set size of the paper and add blank page on the file
 DelaRosa_PDF = PDF('P', 'mm', 'Letter')
@@ -108,7 +133,9 @@ DelaRosa_PDF.primaryDetails()
 DelaRosa_PDF.contactInfo()
 DelaRosa_PDF.academicBackground()
 DelaRosa_PDF.achievements()
-DelaRosa_PDF.coreCompetencies()
+DelaRosa_PDF.skills()
+DelaRosa_PDF.technicalQualification()
+DelaRosa_PDF.characterReference()
 
 #Saving into PDF file
 DelaRosa_PDF.output(dlrs_resume) 
