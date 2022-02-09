@@ -45,7 +45,7 @@ class PDF (FPDF):
         self.image ('graph_techqualification.png', 120, 217, 60, 0)
 
     def primaryDetails(self):
-        self.set_font("times", "B", 13)
+        self.set_font("Courier", "B", 13)
         self.cell (0,22, "", ln=True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"PERSONAL INFORMATION", ln =1, border= 1, fill= True, align= 'C')
@@ -58,7 +58,7 @@ class PDF (FPDF):
         self.cell(109,7, "Weight: " + str(resume_data["primaryDetails"][0]["Weight"]),ln =True, align= 'R')
     
     def contactInfo (self):
-        self.set_font("times", "B",13)
+        self.set_font("Courier", "B",13)
         self.cell (0,1,"",ln =True)
         self.set_fill_color(152,245,255)
         self.cell (195, 8, "CONTACT INFORMATION", border=1, fill=True, align = 'C', ln=1)
@@ -67,7 +67,7 @@ class PDF (FPDF):
         self.cell(116,7, "Cellphone Number: " + str(resume_data["contactInfo"][0]["Cellphone number"]),ln =True, align = 'R')
 
     def academicBackground (self):
-        self.set_font ("times", 'B', 13)
+        self.set_font ("Courier", 'B', 13)
         self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"ACADEMIC BACKGROUND", ln =1, border= 1, fill= True, align= 'C')
@@ -78,7 +78,7 @@ class PDF (FPDF):
         self.cell(0,7, "College (PRESENT): " + str(resume_data["academicBackground"][0]["College (PRESENT)"]),ln =True, align = 'C')
 
     def achievements(self):
-        self.set_font ("times", 'B', 13)
+        self.set_font ("Courier", 'B', 13)
         self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"ACHIEVEMENTS", ln =1, border= 1, fill= True, align= 'C')
@@ -91,7 +91,7 @@ class PDF (FPDF):
         self.cell(75,7, str(resume_data["achievements"][0]["Achvmnts3_3"]),ln =True, align = 'R')
 
     def skills (self):
-        self.set_font ("times", 'B', 13)
+        self.set_font ("Courier", 'B', 13)
         self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"SKILLS", ln =1, border= 1, fill= True, align= 'C')
@@ -103,7 +103,7 @@ class PDF (FPDF):
         self.cell(0,7, str(resume_data["skills"][0]["Skill5"]),ln =True, align = 'C')
 
     def technicalQualification (self):
-        self.set_font ("times", 'B', 13)
+        self.set_font ("Courier", 'B', 13)
         self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"TECHNICAL QUALIFICATION", ln =1, border= 1, fill= True, align= 'C')
@@ -114,7 +114,7 @@ class PDF (FPDF):
 
 
     def characterReference(self):
-        self.set_font ("times", 'B', 13)
+        self.set_font ("Courier", 'B', 13)
         self.cell (0,1, "", ln =True)
         self.set_fill_color(152,245,255)
         self.cell(195,8,"CHARACTER REFERENCE", ln =1, border= 1, fill= True, align= 'C')
