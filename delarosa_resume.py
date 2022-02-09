@@ -41,6 +41,7 @@ class PDF (FPDF):
         self.image ('2x2_picture.png',160,10,40,0)
         self.image ('divider.png',0,8,500,2)
         self.image ('divider.png',0,50,500,2)
+        self.image ('graph_techqualification.png', 120, 220, 60, 0)
 
     def primaryDetails(self):
         self.set_font("times", "B", 13)
@@ -106,9 +107,9 @@ class PDF (FPDF):
         self.set_fill_color(152,245,255)
         self.cell(195,8,"TECHNICAL QUALIFICATION", ln =1, border= 1, fill= True, align= 'C')
         self.set_font ("times",'', 11)
-        self.cell(90,7, "Microsoft Office: " + str(resume_data["technicalQualification"][0]["Microsoft Office"]),ln =True, align = 'R')
-        self.cell(90,7, "Programming Skill: " + str(resume_data["technicalQualification"][0]["Programming Skills"]),ln =True, align = 'R')
-        self.cell(90,7, "Graphic Editing: "+str(resume_data["technicalQualification"][0]["Graphic Editing"]),ln=True, align = 'R')
+        self.cell(95,7, "Microsoft Office: " + str(resume_data["technicalQualification"][0]["Microsoft Office"]),ln =True, align = 'R')
+        self.cell(95,7, "Programming Skill: " + str(resume_data["technicalQualification"][0]["Programming Skills"]),ln =True, align = 'R')
+        self.cell(95,7, "Graphic Editing: "+str(resume_data["technicalQualification"][0]["Graphic Editing"]),ln=True, align = 'R')
 
 
     def characterReference(self):
