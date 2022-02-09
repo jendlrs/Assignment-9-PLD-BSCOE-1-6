@@ -45,7 +45,8 @@ class PDF (FPDF):
     def primaryDetails(self):
         self.set_font("times", "B", 13)
         self.cell (0,35, "", ln=True)
-        self.cell(115,8,"PERSONAL INFORMATION", ln =1, border= 1, align= 'C')
+        self.set_fill_color(152,245,255)
+        self.cell(115,8,"PERSONAL INFORMATION", ln =1, border= 1, fill= True, align= 'C')
         self.set_font ("times",'', 11)
         self.cell(70,7, "Full Name: " + str(resume_data["primaryDetails"][0]["Full Name"]),ln =True)
         self.cell(70,7, "Sex/Gender: " + str(resume_data["primaryDetails"][0]["Sex / Gender"]),ln =True)
